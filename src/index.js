@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Event listener for search button click
     document.getElementById("search-button").addEventListener("click", function(event) {
-        event.preventDefault();
         handleSearch();
     });
 
