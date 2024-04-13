@@ -5,7 +5,7 @@
 #### By *Brenda Cheptoo*
 
 ## Description
-This project entails developing a web application or a webpage displaying information about the UK holidays, i.e name of the holiday, date and whether it's marked as a bunting day(a ay off work).
+This project entails developing a web application or a webpage displaying information about the UK holidays, i.e name of the holiday, date,whether it's marked as a bunting day(a day off work) and one can give a description of the holiday in the notes attribute.
 
 The Javascript file fetches the UK bank holiday data from the UK government's bank holidays API using the URL "https://www.gov.uk/bank-holidays.json".
 
