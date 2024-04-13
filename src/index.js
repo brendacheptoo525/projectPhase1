@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Event listener for submitting the add holiday form
     document.getElementById("add-holiday-form").addEventListener("submit", function(event) {
-        event.preventDefault();
+        
         // Retrieve values from form fields
         const title = document.getElementById("new-holiday-title").value;
         const date = document.getElementById("new-holiday-date").value;
