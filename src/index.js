@@ -24,12 +24,14 @@ document.addEventListener("DOMContentLoaded", function() {
         const title = document.getElementById("new-holiday-title").value;
         const date = document.getElementById("new-holiday-date").value;
         const bunting = document.getElementById("new-holiday-bunting").checked;
+        const notes = document.getElementById("new-holiday-notes").value;
 
         // Create a new holiday object
         const newHoliday = {
             title: title,
             date: date,
-            bunting: bunting
+            bunting: bunting,
+            notes: notes
         };
 
         // Call function to create holiday
@@ -59,7 +61,7 @@ function displayAllHolidays(holidays) {
     holidays.forEach((holiday, index) => {
         const listItem = document.createElement('li');
         // Populate list item with holiday details and buttons for editing and deleting
-        listItem.innerHTML = `<strong>${holiday.title}</strong><br>Date: ${holiday.date}<br>Bunting: ${holiday.bunting}
+        listItem.innerHTML = `<strong>${holiday.title}</strong><br>Date: ${holiday.date}<br>Bunting: ${holiday.bunting}<br>Notes: ${holiday.notes}
         <button class="edit-button" onclick="editHoliday(${index})">Edit</button>
         <button class="delete-button" onclick="deleteHoliday(${index})">Delete</button>`;
         holidaysList.appendChild(listItem);
@@ -103,13 +105,15 @@ function editHoliday(index) {
     const updatedTitle = prompt("Enter updated title", holiday.title);
     const updatedDate = prompt("Enter updated date", holiday.date);
     const updatedBunting = confirm("Is bunting enabled?");
+    const updatedNotes = prompt("Enter updated notes", holiday.notes);
     
     // Create updated holiday object
     const updatedHoliday = {
         ...holiday,
         title: updatedTitle,
         date: updatedDate,
-        bunting: updatedBunting
+        bunting: updatedBunting,
+        notes: updatedNotes
     };
 
     // Update the holiday in the array
